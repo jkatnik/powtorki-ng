@@ -1,4 +1,4 @@
-# 1. Tworzenie projketu
+# 1. Tworzenie projektu
 tag startowy: nowy-projekt
 tag koncowy nowy-projekt-gotowe
 
