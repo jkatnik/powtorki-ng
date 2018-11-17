@@ -6,8 +6,8 @@
 1. Zainstaluj Bootstrap'a i NG-Bootstrap'a
 
 ```
-npm install --save bootstrap@latest
-npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap@latest
+npm install @ng-bootstrap/ng-bootstrap
 ```
 
 Zaimportuj NgbModule w app.module
@@ -29,4 +29,25 @@ Do app.component.html dodaj
 ```
 aby sprawdzić czy style Bootstrap'a załadowały się prawidłowo.
 
-3. dfgdsa
+3. Zainstaluj Font-Awesome
+```
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome
+```
+
+Zaimportuj FontAwesomeModule w app.module
+
+W app.component.ts zaimportuj
+```
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+```
+i utwórz pole klasy:
+```
+faCoffee = faCoffee;
+```
+
+Do app.component.html dodaj
+```
+<fa-icon [icon]="faCoffee"></fa-icon>
+```
