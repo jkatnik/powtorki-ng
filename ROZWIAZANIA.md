@@ -47,7 +47,7 @@ i utwórz pole klasy:
 faCoffee = faCoffee;
 ```
 
-Do app.component.html dodaj
+Do app.component.html dodaj wewnątrz button'a
 ```
 <fa-icon [icon]="faCoffee"></fa-icon>
 ```
