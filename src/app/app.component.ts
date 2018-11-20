@@ -9,4 +9,9 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   faCoffee = faCoffee;
+
+  alert($event): void {
+    window.alert($event);
+  }
+
 }
