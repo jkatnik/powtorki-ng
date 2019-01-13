@@ -1,8 +1,8 @@
 # Zadania
 ## 1. Tworzenie projektu
-tag startowy: nowy-projekt
+**tag startowy**: nowy-projekt
 
-tag koncowy: nowy-projekt-gotowe
+**tag końcowy**: nowy-projekt-gotowe
 
 ### Zadanie:
 1. utworzyć nowy projekt angularowy przy użyciu CLI, bez routingu w bieżącym katalogu
@@ -10,9 +10,9 @@ tag koncowy: nowy-projekt-gotowe
 1. zaimportować font-awersome
 
 ## 2. Tworzenie komponentu i binding
-tag startowy: komponent-i-binding
+**tag startowy**: komponent-i-binding
 
-tag koncowy: komponent-i-binding-gotowe
+**tag końcowy**: komponent-i-binding-gotowe
 
 ### Zadanie:
 1. utwórz komponent "echo"
@@ -22,7 +22,19 @@ tag koncowy: komponent-i-binding-gotowe
 1. ustaw wartość myValue za pomocą parametru wejściowego
 1. wyemituj wartość myValue po kliknięciu w przycisk i wyświetl wartość event'u w alert'cie w app-component
 
+## 3. Prosta nawigacja
+**tag startowy**: prosta-nawigacja
 
+**tag końcowy**: prosta-nawigacja-gotowe
+
+### Zadanie:
+1. utwórz komponent "team"
+1. utwórz moduł app-routing
+1. utwórz linki przekierowujące do TeamComponent ("team") i EchoComponent ("")
+1. podkreśl bieżący link
+1. dodaj przycisk przekierowujący do komponentu EchoComponent
+1. dodaj ścieżkę 'echo' przekierowującą do ''
+1. dodaj komponent NotFound i przekieruj do niego niedopasowane ścieżki
 
 # Pomoc
 ## Kasowanie tagu
