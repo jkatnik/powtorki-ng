@@ -25,7 +25,15 @@ tag koncowy: komponent-i-binding-gotowe
 
 
 # Pomoc
-## Kasowanie taga
+## Kasowanie tagu
 
     git tag --delete tagname
     git push --delete origin tagname
+
+## Wypychanie tagu/tagów
+
+    git push tagname
+
+lub
+
+    git push --tags
