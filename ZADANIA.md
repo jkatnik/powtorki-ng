@@ -21,3 +21,11 @@ tag koncowy: komponent-i-binding-gotowe
 1. wyświetl obok inputu myValue przy użyciu interpolacji
 1. ustaw wartość myValue za pomocą parametru wejściowego
 1. wyemituj wartość myValue po kliknięciu w przycisk i wyświetl wartość event'u w alert'cie w app-component
+
+
+
+# Pomoc
+## Kasowanie taga
+
+    git tag --delete tagname
+    git push --delete origin tagname
