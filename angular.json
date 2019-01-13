@@ -132,5 +132,21 @@
       }
     }
   },
-  "defaultProject": "powtorki-ng"
+  "defaultProject": "powtorki-ng",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      },
+      "module": {
+        "spec": false
+      },
+      "service": {
+        "spec": false
+      },
+      "directive": {
+        "spec": false
+      }
+    }
+  }
 }
