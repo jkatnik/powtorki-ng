@@ -49,3 +49,6 @@
 lub
 
     git push --tags
+
+## Krzywa uczenia
+- 2019-01-16 7:52
