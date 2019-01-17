@@ -28,9 +28,9 @@
 **tag końcowy**: prosta-nawigacja-gotowe
 
 ### Zadanie:
-1. utwórz komponent "team"
-1. utwórz moduł app-routing
-1. utwórz linki przekierowujące do TeamComponent ("team") i EchoComponent ("")
+1. utwórz komponent `team`
+1. utwórz moduł `app-routing`
+1. utwórz linki przekierowujące do TeamComponent (`team`) i EchoComponent (``)
 1. podkreśl bieżący link
 1. dodaj przycisk przekierowujący do komponentu EchoComponent
 1. dodaj ścieżkę 'echo' przekierowującą do ''
@@ -52,3 +52,4 @@ lub
 
 ## Krzywa uczenia
 - 2019-01-16 7:52
+- 2019-01-17 6:38
