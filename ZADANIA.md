@@ -50,8 +50,5 @@ lub
 
     git push --tags
 
-## Krzywa uczenia
-- 2019-01-16 7:52
-- 2019-01-17 6:38
-- 2019-01-18 6:40
-- 2019-01-19 7:02
+## [Postęp - link](https://docs.google.com/spreadsheets/d/1nRTxDM1nSRz4mBU_tiln9GKsfncoPwonR0h6qGYxb_Q/edit#gid=285080725)
+
