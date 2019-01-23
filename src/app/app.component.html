@@ -1,6 +1,11 @@
+<a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{extact: true}">Echo</a>
+<a routerLink="team" routerLinkActive="active">team</a>
+<br>
+<button type="button" class="btn btn-primary" (click)="gotoEcho()">echo</button>
+<hr>
+<router-outlet></router-outlet>
+<hr>
 <button class="btn btn-danger">
   <fa-icon [icon]="faCoffee"></fa-icon>
   Test
 </button>
-<hr/>
-<app-echo [myValue]="'initValue'" (myValueUpdated)="alert($event)"></app-echo>
