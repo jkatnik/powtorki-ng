@@ -42,7 +42,7 @@
 **tag końcowy**: td-form-gotowe
 
 ### Zadanie:
-Potrafię utworzyć Template Driven form i zalogować na konsoli wartości formularza.
+Potrafię utworzyć Template Driven form i zalogować wartości formularza.
 Zablokować submitowanie jeśli formularz jest wypełniony niepoprawnie.
 Podświetlić błędnie wypełnione pola.
 Wyświetlić komunikat błędu.
