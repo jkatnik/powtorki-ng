@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { EchoComponent } from './echo/echo.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamComponent } from './team/team.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EchoComponent,
     TeamComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

@@ -218,3 +218,40 @@
             component: NotFoundComponent
         }
         ```
+## 4. template driven form
+1. wygeneruj LoginForm `ng g c LoginForm`
+1. rozszerz routing w app-routing.mpdule.ts
+    ```
+    {
+        path: 'login',
+        component: LoginComponent
+    }
+    ```
+1. dodaj linka w `app.component.html`
+   ```
+   <a routerLink="login" 
+     routerLinkActive="active">
+       login
+   </a>
+   ```
+1. **zobacz** login-form.component.html
+    ```
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    ...
+    <input name="email" ngModel #email="ngModel" required email>
+    <div *ngIf="email.hasError('required')">
+    ...
+    <input name="password" ngModel required minlength="4">
+    <div *ngIf="loginForm.controls['password']?.hasError('required')">
+    ...
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+
+    ```
+1. **zobacz** login-form.component.ts
+1. login-form.component.css
+    ```
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
+    ```
+   

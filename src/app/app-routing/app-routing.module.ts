@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EchoComponent } from '../echo/echo.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { TeamComponent } from '../team/team.component';
+import { LoginFormComponent } from '../login-form/login-form.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,9 @@ const routes: Routes = [
   }, {
     path: 'team',
     component: TeamComponent
+  }, {
+    path: 'login',
+    component: LoginFormComponent
   }, {
     path: 'echo',
     redirectTo: ''
