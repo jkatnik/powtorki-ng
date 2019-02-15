@@ -10,7 +10,7 @@
     <div *ngIf="email.hasError('required')">
       Required!
     </div>
-    <div *ngIf="email.hasError('email')">
+    <div *ngIf="email.errors?.email">
       Invalid email!
     </div>
   </div>

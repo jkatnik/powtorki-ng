@@ -229,7 +229,7 @@
     ```
 1. dodaj linka w `app.component.html`
    ```
-   <a routerLink="login" 
+   <a routerLink="login"
      routerLinkActive="active">
        login
    </a>
@@ -239,7 +239,8 @@
     <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
     ...
     <input name="email" ngModel #email="ngModel" required email>
-    <div *ngIf="email.hasError('required')">
+    <div *ngIf="email.hasError('required')"> ... </div>
+    <div *ngIf="email.errors?.email"> ... </div>
     ...
     <input name="password" ngModel required minlength="4">
     <div *ngIf="loginForm.controls['password']?.hasError('required')">
@@ -254,4 +255,4 @@
         border: 1px solid red;
     }
     ```
-   
+
