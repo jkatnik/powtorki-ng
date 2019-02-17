@@ -6,7 +6,7 @@ nowy-projekt --> nowy-projekt-gotowe
 nowy-projekt-gotowe --> komponent-i-binding
 komponent-i-binding --> komponent-i-binding-gotowe
 
-nowy-projekt-gotowe --> prosta-nawigacja
+komponent-i-binding-gotowe --> prosta-nawigacja
 prosta-nawigacja --> prosta-nawigacja-gotowe
 
 nowy-projekt-gotowe --> td-form
