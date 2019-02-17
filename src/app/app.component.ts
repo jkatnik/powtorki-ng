@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,4 +9,10 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   faCoffee = faCoffee;
+
+  constructor(private router: Router) { }
+
+  gotoEcho(): void {
+    this.router.navigate(['echo']);
+  }
 }
