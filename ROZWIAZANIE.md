@@ -1,7 +1,6 @@
 # Prosta nawigacja - rozwiązanie
 
-1. utwórz komponent `team`
-
+1. wygeneruj komponent `team`
     ```
     ng g c team
     ```
@@ -48,7 +47,7 @@
 1. podkreśl bieżący link
     1. do linków dodaj atrybut `routerLink` oraz `routerLinkActiveOptions`
         ```
-        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{extact: true}">Echo</a> |
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Echo</a> |
         <a routerLink="team" routerLinkActive="active">team</a>
         ```
     2. w app.component.css dodaj

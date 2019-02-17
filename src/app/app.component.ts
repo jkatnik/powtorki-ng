@@ -9,10 +9,15 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   faCoffee = faCoffee;
+  myValue: string;
 
   constructor(private router: Router) { }
 
   gotoEcho(): void {
     this.router.navigate(['echo']);
+  }
+
+  alert($event): void {
+    window.alert($event);
   }
 }
