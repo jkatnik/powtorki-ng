@@ -1,0 +1,38 @@
+<h1>Login Form</h1>
+
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <legend>
+      email:
+      <input name="email" ngModel #email="ngModel" required email>
+    </legend>
+    <div *ngIf="email.hasError('required')">
+      Required!
+    </div>
+    <div *ngIf="email.errors?.email">
+      Invalid email!
+    </div>
+  </div>
+
+  <div>
+    <legend>
+      password:
+      <input name="password" ngModel required minlength="4">
+    </legend>
+    <div *ngIf="loginForm.controls['password']?.hasError('required')">
+      Required!
+    </div>
+    <div *ngIf="loginForm.controls['password']?.hasError('minlength')">
+      Too short!
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+  </div>
+
+  <pre>
+    {{ loginForm.value | json }}
+  </pre>
+</form>

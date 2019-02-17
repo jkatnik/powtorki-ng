@@ -1,59 +1,31 @@
-# Tworzenie projektu - rozwiązanie
+# template driven form
 
-1. ``` ng new powtorki-ng --directory . ```
-1. Zainstaluj Bootstrap'a i NG-Bootstrap'a
+branch **poczatkowy** td-form
+branch **końcowy** td-form-gotowe
 
+1. wygeneruj LoginForm `ng g c LoginForm`
+1. dodaj do `app.component.html`
+   ```
+   <app-login-form></app-login-form>
+   ```
+1. **zobacz** login-form.component.html
     ```
-    npm install bootstrap@latest
-    npm install @ng-bootstrap/ng-bootstrap
-    ```
-
-    Zaimportuj NgbModule w app.module
-    ```
-    import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
     ...
-    imports: [
-      NgbModule
-    ]
-    ```
-
-    Dodaj
-    `node_modules/bootstrap/dist/css/bootstrap.min.css`
-    do `angular.json` w sekcji `styles`
-
-    Do `app.component.html` dodaj
-    ```
-    <button class="btn btn-danger">Test</button>
-    ```
-    aby sprawdzić czy style Bootstrap'a załadowały się prawidłowo.
-
-1. Zainstaluj Font-Awesome
-    ```
-    npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome
-    ```
-
-    Zaimportuj FontAwesomeModule w `app.module`
-    ```
-    import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+    <input name="email" ngModel #email="ngModel" required email>
+    <div *ngIf="email.hasError('required')"> ... </div>
+    <div *ngIf="email.errors?.email"> ... </div>
     ...
-    imports: [
-      NgbModule,
-      FontAwesomeModule
-    ]
-    ```
-
-    W `app.component.ts` zaimportuj
-    ```
-    import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-    ```
-
-    i utwórz pole klasy:
+    <input name="password" ngModel required minlength="4">
+    <div *ngIf="loginForm.controls['password']?.hasError('required')">
+    ...
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
 
     ```
-    faCoffee = faCoffee;
+1. **zobacz** login-form.component.ts
+1. login-form.component.css
     ```
-
-    Do `app.component.html` dodaj wewnątrz button'a
-    ```
-    <fa-icon [icon]="faCoffee"></fa-icon>
+    input.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
     ```
