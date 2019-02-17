@@ -1,10 +1,18 @@
-# Tworzenie projektu
+# Attribute directives
 
-**branch startowy**: nowy-projekt
+**branch startowy**: attr-directives
 
-**branch końcowy**: nowy-projekt-gotowe
+**branch końcowy**: attr-directives-gotowe
 
-# Zadanie:
-1. utworzyć nowy projekt angularowy przy użyciu CLI, bez routingu w bieżącym katalogu
-1. zaimportować bootstrap'a
-1. zaimportować font-awesome
+## Zadanie:
+1. w `app.component` wyświetlić listę
+    ```
+    heroes = ['As', 'Jakub Wędrowycz', 'Geralt z Rivii'];
+    ```
+1. utworzyć dyrektywę `highlight` podświetlającą elementy listy bohaterów
+1. kolor podświetlenia może być opcjonalnie ustawiony za pomocą atrybutu `hl-color`
+1. oraz ustawiony bezpośrednio na dyrektywie
+1. domyślny kolor podświetlenia to czerwony
+1. dodać atrybut `hl-border`, który ustawiony na true doda klasy BS `border border-dark`
+1. nie wolno operować bezpośrednio na DOM
+1. po opuszczeniu elemntu przywrócić oryginalne podświetlenie
