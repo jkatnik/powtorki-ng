@@ -1,59 +1,64 @@
-# Tworzenie projektu - rozwiązanie
+# Tworzenie komponentu i binding
 
-1. ``` ng new powtorki-ng --directory . ```
-1. Zainstaluj Bootstrap'a i NG-Bootstrap'a
-
+1. wygeneruj komponent
     ```
-    npm install bootstrap@latest
-    npm install @ng-bootstrap/ng-bootstrap
+    ng g c echo
     ```
-
-    Zaimportuj NgbModule w app.module
+1. dodaj go do app-component.html
     ```
-    import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-    ...
+    <hr/>
+    <app-echo></app-echo>
+    ```
+1. dodaj input i powiąż go z polem komponentu myValue
+    zaimportuj `FormsModule` w `app.module.ts`
+    ```
     imports: [
-      NgbModule
-    ]
+      ...
+      FormsModule,
+    ],
     ```
 
-    Dodaj
-    `node_modules/bootstrap/dist/css/bootstrap.min.css`
-    do `angular.json` w sekcji `styles`
+    ```
+    myValue: string;
 
-    Do `app.component.html` dodaj
+    <input type="text" [(ngModel)]="myValue">
     ```
-    <button class="btn btn-danger">Test</button>
+1. wyświetl obok inputu myValue przy użyciu interpolacji
     ```
-    aby sprawdzić czy style Bootstrap'a załadowały się prawidłowo.
+    value: {{ myValue }}
+    ```
+1. ustaw wartość myValue za pomocą parametru wejściowego
+    ```
+    @Input() myValue: string;
+    ```
 
-1. Zainstaluj Font-Awesome
     ```
-    npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/angular-fontawesome
+    <app-echo [myValue]="'initValue'"></app-echo>
     ```
+1. wyemituj wartość myValue po kliknięciu w przycisk i wyświetl wartość event'u w alert'cie w app-component
 
-    Zaimportuj FontAwesomeModule w `app.module`
+    w echo.component.ts
     ```
-    import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+    @Output() myValueUpdated = new EventEmitter<string>();
     ...
-    imports: [
-      NgbModule,
-      FontAwesomeModule
-    ]
+    emit() {
+      this.myValueUpdated.emit(this.myValue);
+    }
     ```
 
-    W `app.component.ts` zaimportuj
+    w echo.component.html
     ```
-    import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-    ```
-
-    i utwórz pole klasy:
-
-    ```
-    faCoffee = faCoffee;
+    <button class="btn btn-danger" (click)="emit()">Emit</button>
     ```
 
-    Do `app.component.html` dodaj wewnątrz button'a
+    w app.component.html
     ```
-    <fa-icon [icon]="faCoffee"></fa-icon>
+    <app-echo [myValue]="'initValue'" (myValueUpdated)="alert($event)"></app-echo>
+    ```
+
+    w app.component.ts
+    ```
+    alert($event): void {
+      window.alert($event);
+    }
     ```
