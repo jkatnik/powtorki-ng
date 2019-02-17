@@ -12,7 +12,7 @@ prosta-nawigacja --> prosta-nawigacja-gotowe
 nowy-projekt-gotowe --> td-form
 nowy-projekt-gotowe --> td-form-gotowe
 
-nowy-projekt-gotowe --> attribute-directives
-nowy-projekt-gotowe --> attribute-directives-gotowe
+nowy-projekt-gotowe --> attr-directives
+nowy-projekt-gotowe --> attr-directives-gotowe
 
 ```
