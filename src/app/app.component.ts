@@ -8,4 +8,5 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   faCoffee = faCoffee;
+  heroes = ['As', 'Jakub Wędrowycz', 'Geralt z Rivii'];
 }
