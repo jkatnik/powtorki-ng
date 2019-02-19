@@ -1,25 +1,22 @@
-import { Directive, Renderer2, ElementRef, HostListener, Input } from '@angular/core';
-import { DomAdapter } from '@angular/platform-browser/src/dom/dom_adapter';
+import { Directive, ElementRef, Renderer2, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-  constructor(private element: ElementRef<HTMLElement>, private renderer: Renderer2) { }
 
-  @Input('appHighlight')
-  color: string;
-
+  @Input('appHighlight') color: string;
+  // tslint:disable-next-line:no-input-rename
+  @Input('hl-border') border: boolean;
   originalColor: string;
 
-  // tslint:disable-next-line:no-input-rename
-  @Input('hl-border')
-  border: boolean;
+  constructor(private element: ElementRef<HTMLElement>, private renderer: Renderer2) { }
 
   @HostListener('mouseover')
   addHighlight(): void {
     const color = this.color || 'red';
     this.originalColor = this.element.nativeElement.style.backgroundColor;
+
     this.renderer.setStyle(this.element.nativeElement, 'background-color', color);
 
     if (this.border) {
@@ -34,5 +31,4 @@ export class HighlightDirective {
     this.renderer.removeClass(this.element.nativeElement, 'border');
     this.renderer.removeClass(this.element.nativeElement, 'border-dark');
   }
-
 }

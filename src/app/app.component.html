@@ -5,6 +5,11 @@
 
 <h2>Heroes</h2>
 <ul>
-    <li *ngFor="let hero of heroes" appHighlight="lightBlue" hl-border="true">{{ hero }}</li>
+    <li *ngFor="let hero of heroes" appHighlight="blue">
+        {{ hero }}
+    </li>
 </ul>
-<div style="background-color: yellow" appHighlight="red">FOO - powiniennem być żółty po utracie focus'a</div>
+
+<div style="background-color: yellow" appHighlight hl-border="true">
+    Zwykle jestem żółty
+</div>
