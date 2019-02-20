@@ -10,7 +10,10 @@ komponent-i-binding-gotowe --> prosta-nawigacja
 prosta-nawigacja --> prosta-nawigacja-gotowe
 
 nowy-projekt-gotowe --> td-form
-nowy-projekt-gotowe --> td-form-gotowe
+td-form --> td-form-gotowe
+
+td-form-gotowe --> td-form-validation
+td-form-validation --> td-form-validation-gotowe
 
 nowy-projekt-gotowe --> attr-directives
 nowy-projekt-gotowe --> attr-directives-gotowe
