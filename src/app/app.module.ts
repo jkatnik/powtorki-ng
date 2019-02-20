@@ -5,11 +5,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { PasswordComplexityDirective } from './shared/password-complexity.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    PasswordComplexityDirective
   ],
   imports: [
     BrowserModule,

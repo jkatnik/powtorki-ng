@@ -15,10 +15,20 @@
   <div>
     <legend>
       Password:
-      <input name="password" ngModel required>
+      <input name="password" ngModel required appPasswordComplexity min-length="8" min-numbers="2">
+      {{ loginForm.controls['password']?.value.length }}
     </legend>
     <div *ngIf="loginForm.controls['password']?.hasError('required')">
       Required!
+    </div>
+    <div *ngIf="loginForm.controls['password']?.getError('appPasswordComplexity') as error">
+      Too weak!
+      <span *ngIf="error === 'too-short'">
+        Too short!
+      </span>
+      <span *ngIf="error === 'not-enought-numbers'">
+        Password should contain at least two numbers!
+      </span>
     </div>
   </div>
 

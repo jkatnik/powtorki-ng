@@ -10,10 +10,13 @@ Potrafię utworzyć walidatory działające na kilku polach na raz.
 
 1. Utwórz walidator synchroniczny `passwordComplexity` sprawdzający złożoność hasła.
 1. Walidator powinien obsługiwać następujące parametry: `min-length: number`, `min-numbers: number`
+   ```
+   const numbersPresent = control.value.replace(/[^0-9]/g, '').length;
+   ```
 1. Podepnij ten walidator do pola `password`
 ---
-4. Utwórz walidator asynchroniczny `checkIfLoginIsFree` symulujący sprawdzenie czy email nie jest już w użyciu.
-1. Podepnij ten walidator do pola `email`
+1. Utwórz walidator asynchroniczny `checkIfLoginIsFree` symulujący sprawdzenie czy email nie jest już w użyciu.
+2. Podepnij ten walidator do pola `email`
 ---
 6. Utwórz walidator synchroniczny `passwordMatch` sprawdzający czy `password` i `password2` zgadzają się.
    Nazwy porównywanych pól przekaż jako parametry. Oznacz pola jako `ng-invalid` jeśli się nie zgadzają.
