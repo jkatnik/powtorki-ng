@@ -1,22 +1,26 @@
-# template driven form
+# template driven form custom validators
 
-**branch startowy**: nowy-projekt
+**branch startowy**: td-form-validation
 
-**branch końcowy**: nowy-projekt-gotowe
+**branch końcowy**: td-form-validation-gotowe
 
 ## Zadanie:
-Potrafię utworzyć Template Driven form i zalogować wartości formularza.
-Zablokować submitowanie jeśli formularz jest wypełniony niepoprawnie.
-Podświetlić błędnie wypełnione pola.
-Wyświetlić komunikat błędu.
+Potrafię utworzyć walidatory dla formularza typu template driven, zarówno synchroniczne jak i asynchroniczne.
+Potrafię utworzyć walidatory działające na kilku polach na raz.
 
-1. Utwórz komponent LoginForm, dodaj go do menu i routingu
-1. Utwórz formularz z polami: email oraz password
-1. Dodaj przycisk submit
-1. Po submicie wyświetl wartość formularza na ekranie w postaci JSON
-1. Zaznacz pola formularza jako required, email jako email a password jako pole o minimalnej długości 4 znaków
-1. Ustaw kolor ramki niepoprawnie wypełnionych pól na czerwony
-1. Jeśli pole jest niewypełnione to wyświetl pod nim komunikat "Pole wymagane"
-1. Jeśli email jest niepoprawny to wyświetl pod nim "Niepoprawny format email'a"
-1. Jeśli hasło ma mniej niż 4 znaki to wyświetl "Za krótkie hasło."
-1. Jeśli formularz jest niepoprawnie wypełniony to zablokuj przyciski Submit.
+1. Utwórz walidator synchroniczny `passwordComplexity` sprawdzający złożoność hasła.
+1. Walidator powinien obsługiwać następujące parametry: `min-length: number`, `min-numbers: number`
+1. Podepnij ten walidator do pola `password`
+---
+4. Utwórz walidator asynchroniczny `checkIfLoginIsFree` symulujący sprawdzenie czy email nie jest już w użyciu.
+1. Podepnij ten walidator do pola `email`
+---
+6. Utwórz walidator synchroniczny `passwordMatch` sprawdzający czy `password` i `password2` zgadzają się.
+   Nazwy porównywanych pól przekaż jako parametry. Oznacz pola jako `ng-invalid` jeśli się nie zgadzają.
+1. Dodaj komunikat błędu pod polem `password`
+1. Podepnij ten walidator
+
+## Linki:
+- [Angular.io - Fundamentals](https://angular.io/guide/form-validation)
+- [Stoper](https://vclock.com/stopwatch/#)
+- [Progress](https://docs.google.com/spreadsheets/d/1nRTxDM1nSRz4mBU_tiln9GKsfncoPwonR0h6qGYxb_Q/edit#gid=285080725)

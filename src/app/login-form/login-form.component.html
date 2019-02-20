@@ -4,27 +4,31 @@
 
   <div>
     <legend>
-      email:
-      <input name="email" ngModel #email="ngModel" required email>
+      Email:
+      <input name="email" ngModel #email="ngModel" required>
     </legend>
     <div *ngIf="email.hasError('required')">
       Required!
-    </div>
-    <div *ngIf="email.errors?.email">
-      Invalid email!
     </div>
   </div>
 
   <div>
     <legend>
-      password:
-      <input name="password" ngModel required minlength="4">
+      Password:
+      <input name="password" ngModel required>
     </legend>
     <div *ngIf="loginForm.controls['password']?.hasError('required')">
       Required!
     </div>
-    <div *ngIf="loginForm.controls['password']?.hasError('minlength')">
-      Too short!
+  </div>
+
+  <div>
+    <legend>
+      Retype password:
+      <input name="password2" ngModel required>
+    </legend>
+    <div *ngIf="loginForm.controls['password2']?.hasError('required')">
+      Required!
     </div>
   </div>
 
