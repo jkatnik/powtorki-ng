@@ -6,12 +6,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { PasswordComplexityDirective } from './shared/password-complexity.directive';
+import { CheckIfLoginIsFreeDirective } from './shared/check-if-login-is-free.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    PasswordComplexityDirective
+    PasswordComplexityDirective,
+    CheckIfLoginIsFreeDirective
   ],
   imports: [
     BrowserModule,

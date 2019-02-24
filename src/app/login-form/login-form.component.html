@@ -5,10 +5,13 @@
   <div>
     <legend>
       Email:
-      <input name="email" ngModel #email="ngModel" required>
+      <input name="email" ngModel #email="ngModel" required appCheckIfLoginIsFree>
     </legend>
     <div *ngIf="email.hasError('required')">
       Required!
+    </div>
+    <div *ngIf="email.hasError('inUse')">
+      Login is in use, please select different!
     </div>
   </div>
 
