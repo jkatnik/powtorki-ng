@@ -15,3 +15,8 @@
 1. dodać atrybut `hl-border`, który ustawiony na true doda klasy BS `border border-dark`
 1. jeśli się da to należy unikać operowacji bezpośrednio na DOM
 1. po opuszczeniu elemntu przywrócić oryginalne podświetlenie
+
+## Linki:
+- [Angular.io - Fundamentals](https://angular.io/guide/attribute-directives)
+- [Stoper](https://vclock.com/stopwatch/#)
+- [Progress](https://docs.google.com/spreadsheets/d/1nRTxDM1nSRz4mBU_tiln9GKsfncoPwonR0h6qGYxb_Q/edit#gid=285080725)
