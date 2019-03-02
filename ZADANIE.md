@@ -25,5 +25,6 @@ Potrafię utworzyć walidatory działające na kilku polach na raz.
 
 ## Linki:
 - [Angular.io - Fundamentals](https://angular.io/guide/form-validation)
+- [blog o walidacji TDF](http://jasonwatmore.com/post/2018/11/10/angular-7-template-driven-forms-validation-example)
 - [Stoper](https://vclock.com/stopwatch/#)
 - [Progress](https://docs.google.com/spreadsheets/d/1nRTxDM1nSRz4mBU_tiln9GKsfncoPwonR0h6qGYxb_Q/edit#gid=285080725)

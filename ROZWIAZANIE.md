@@ -68,3 +68,9 @@
       Login is in use, please select different!
     </div>
     ```
+---
+13. wygeneruj dyrektywę password-match
+    ```
+    ng g d shared/password-match
+    ```
+14. dodaj parametry `mainPassword` i `confirmPassword`
