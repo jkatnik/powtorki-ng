@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { PasswordComplexityDirective } from './shared/password-complexity.directive';
 import { CheckIfLoginIsFreeDirective } from './shared/check-if-login-is-free.directive';
+import { PasswordMatchDirective } from './shared/password-match.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     PasswordComplexityDirective,
-    CheckIfLoginIsFreeDirective
+    CheckIfLoginIsFreeDirective,
+    PasswordMatchDirective
   ],
   imports: [
     BrowserModule,
