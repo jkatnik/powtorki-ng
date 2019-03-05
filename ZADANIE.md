@@ -10,3 +10,7 @@ branch koncowy: **komponent-i-binding-gotowe**
 1. wyświetl obok inputu myValue przy użyciu interpolacji
 1. ustaw wartość myValue za pomocą parametru wejściowego
 1. wyemituj wartość myValue po kliknięciu w przycisk i wyświetl wartość event'u w alert'cie w app-component
+
+## Linki:
+- [Stoper](https://vclock.com/stopwatch/#)
+- [Progress](https://docs.google.com/spreadsheets/d/1nRTxDM1nSRz4mBU_tiln9GKsfncoPwonR0h6qGYxb_Q/edit#gid=285080725)
