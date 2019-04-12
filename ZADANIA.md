@@ -6,13 +6,22 @@ nowy-projekt --> nowy-projekt-gotowe
 nowy-projekt-gotowe --> komponent-i-binding
 komponent-i-binding --> komponent-i-binding-gotowe
 
-nowy-projekt-gotowe --> prosta-nawigacja
+komponent-i-binding-gotowe --> prosta-nawigacja
 prosta-nawigacja --> prosta-nawigacja-gotowe
 
-nowy-projekt-gotowe --> td-form
-nowy-projekt-gotowe --> td-form-gotowe
+prosta-nawigacja-gotowe --> master-detail
+master-detail --> master-detail-gotowe
 
-nowy-projekt-gotowe --> attribute-directives
-nowy-projekt-gotowe --> attribute-directives-gotowe
+nowy-projekt-gotowe --> td-form
+td-form --> td-form-gotowe
+
+td-form-gotowe --> td-form-validation
+td-form-validation --> td-form-validation-gotowe
+
+nowy-projekt-gotowe --> attr-directives
+attr-directives --> attr-directives-gotowe
+
+komponent-i-binding-gotowe --> podstawy-testowania-komponentow
+podstawy-testowania-komponentow --> podstawy-testowania-komponentow-gotowe
 
 ```
