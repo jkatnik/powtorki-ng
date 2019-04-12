@@ -21,4 +21,7 @@ td-form-validation --> td-form-validation-gotowe
 nowy-projekt-gotowe --> attr-directives
 attr-directives --> attr-directives-gotowe
 
+komponent-i-binding-gotowe --> podstawy-testowania-komponentow
+podstawy-testowania-komponentow --> podstawy-testowania-komponentow-gotowe
+
 ```
